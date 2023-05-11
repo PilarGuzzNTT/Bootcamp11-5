@@ -16,11 +16,11 @@ public class PersonListController {
 	@Autowired
 	PersonService personService;
 	
-	@GetMapping("/person-list-1")
+	@GetMapping("/personAll")
 	public String personList1(final Model model){
 		
 		final Flux<Person> personList = personService.allPersons();
-		model.addAttribute("personList", personList);
+		model.addAttribute("personlist", personList);
 		
 		return "personList";
 	}
